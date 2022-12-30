@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="/app.js"></script>
+    <title>Connor Macdougall - Profile</title>
+</head>
+<body id="background">
+    <header id="header">
+        <nav id="navbar">
+                <div id="navbar-title">Connor Macdougall</div>
+                <div id="navbar-locators">
+                    <a class="navbar-locator" id="home-button" href="/index.html" onmouseenter="hyperlinkHandler('home-button',1)" onmouseleave="hyperlinkHandler('home-button',0)">Home</a>
+                    <a class="navbar-locator" id="resume-button" href="/resume.html"  onmouseenter="hyperlinkHandler('resume-button',1)" onmouseleave="hyperlinkHandler('resume-button',0)">Resume</a>
+                    <a class="navbar-locator current-location" id="profile-button">Profile</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="profile-section">
+        <section id="about-me-section">
+            <div class="about-me-sub-section" id="profile-photo-container">
+                <img id="profile-photo" src="" alt="Profile Photo available soon">
+            </div>
+            <div class="about-me-sub-section" id="about-me-text">
+                <section id="details">
+                    <p class="profile-details" id="profile-name-and-age">Connor Macdougall <span id="profile-age">19</span></p>
+                    <p class="profile-details" id="profile-career">Upcoming Software Engineer</p>
+                    <div class="profile-details" id="profile-buzzwords-container">
+                        <p class="profile-buzzwords">Organised</p>
+                        <p class="profile-buzzwords">Tenacious</p>
+                        <p class="profile-buzzwords">Adaptable</p>
+                    </div>
+                </section>
+                <p id="profile-bio">I am a university student, eager to learn and always ready to expand upon my previous experiences to build new and improve old skills. 
+                    I love taking opportunities to improve my experience in the field.</p>
+            </div>
+        </section>
+        <section id="contact-details">
+            <div class="contact-option" id="contact-option-1">
+                <img class="contact-option-logo" id="contact-option-logo-1" src="/images/LinkedIn-logo.svg" alt="LinkedIn Logo">
+                <a class="contact-option-link" id="contact-option-link-1">Coming Soon</a>
+            </div>
+            <div class="contact-option" id="contact-option-2">
+                <img class="contact-option-logo" id="contact-option-logo-2" src="/images/email-logo.png" alt="Email Logo">
+                <a class="contact-option-link" id="contact-option-link-2">connoramacdougall@gmail.com</a>
+            </div>
+        </section>
+    </section>
+    <section id="about-website">
+        About this website
+        <p class="website-details">Last updated: 30/12/2022</p>
+        <p class="website-details">First available online: 30/12/2022</p>
+        <p class="website-details">This website was my first project, and is being continuously updated and improved. This website is hosted through a GitHub public repository.</p>
+        <p class="website-details">Image information:
+            <li class="website-image-details">All are royalty free, or used under a Creative Commons License</li>
+            <li class="website-image-details">Sources: Pixabay (unless otherwise specified)</li>
+        </p>
+    </section>
+    <footer>
+        <a href="#contact-details" id="contact-button" onmouseenter="hyperlinkHandler('contact-button',1)" onmouseleave="hyperlinkHandler('contact-button',0)">Contact Me</a>
+        <img id="footer-logo" src="/images/footer-logo.svg"></img>
+        <div id="trademark-section"><span>&copy;</span> Connor Macdougall, 2022</div>
+    </footer>
+</body>
+</html>
