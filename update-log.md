@@ -1,9 +1,11 @@
 Update Log:
 
 
-  Upcoming updates that will go live in next version (with respective completion dates)
-  - Completed addition of a 'projects' webpage (08/01/2023)
-  - Began work on the addition of a 'projects' webpage (07/01/2023)
+  V2.0.0
+  3.50pm, 09/01/2023
+  - Added links to projects on projects webpage
+  - Completed addition of a projects webpage (08/01/2023)
+  - Began work on the addition of a projects webpage (07/01/2023)
   - Adjusted home webpage slideshow by replacing irrelevant images and removing them from the images folder, also added a title for the slideshow (07/01/2023)
   - Replaced redundant JS function with CSS animations (05/01/2023)
   - Added link to GitHub profile and update log on the profile page (05/01/2023)
