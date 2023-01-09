@@ -9,14 +9,15 @@
     <link rel="icon" type="image/png" href="/resume/images/favicon.png">
     <title>Connor Macdougall - Home</title>
 </head>
-<body id="background">
+<body id="background" onload="slideshowAutonomousHandler()">
     <header id="header">
         <nav id="navbar">
                 <div id="navbar-title">Connor Macdougall</div>
                 <div id="navbar-locators">
                     <a class="navbar-locator current-location" id="home-button">Home</a>
-                    <a class="navbar-locator" id="resume-button" href="resume.html" onmouseenter="hyperlinkHandler('resume-button',1)" onmouseleave="hyperlinkHandler('resume-button',0)">Resume</a>
-                    <a class="navbar-locator" id="profile-button" href="profile.html" onmouseenter="hyperlinkHandler('profile-button',1)" onmouseleave="hyperlinkHandler('profile-button',0)">Profile</a>
+                    <a class="navbar-locator not-current-location" id="resume-button" href="resume.html">Resume</a>
+                    <a class="navbar-locator not-current-location" id="projects-button" href="projects.html">Projects</a>
+                    <a class="navbar-locator not-current-location" id="profile-button" href="profile.html">Profile</a>
                 </div>
             </div>
         </nav>
@@ -26,30 +27,31 @@
         <p class="introduction-text" id="welcome-introduction-text">Welcome to my website, my first software project which has also become a compilation of all my other experiences, to demonstrate my capabilities. 
             Attempted over the summer of '22-'23, this website was my beginning to coding after I was introduced to it in ENG1013, a first year engineering unit at Monash University. </p>
     </section>
+    <h2 id="slideshow-title"><a href="projects.html">Projects</a> and <a href="resume.html">Experiences</a></h2>
     <section id="slideshow">
             <div class="slideshow-display-container slideshow-right" id="slideshow-display-container-1" onclick="slideshowHandler(this.id)">
-                <img class="slideshow-image" id="slideshow-image-1"  src="/resume/images/dolphin.jpg" alt="A dolphin underwater">
-                <p class="slideshow-caption" id="slideshow-caption-1">A dolphin</p>
+                <img class="slideshow-image" id="slideshow-image-1"  src="/resume/images/ENG1013-project.jpg" alt="Breadboard used to house electronics coded in the ENG1013 team project">
+                <p class="slideshow-caption" id="slideshow-caption-1">The breadboard used to house the electronics that I coded in the team project for ENG1013</p>
             </div>
             <div class="slideshow-display-container slideshow-far-right" id="slideshow-display-container-2" onclick="slideshowHandler(this.id)">
-                <img class="slideshow-image" id="slideshow-image-2"  src="/resume/images/penguin.jpg" alt="A penguin underwater">
-                <p class="slideshow-caption" id="slideshow-caption-2">A penguin</p>
+                <img class="slideshow-image" id="slideshow-image-2"  src="/resume/images/resume-website-screenshot.png" alt="Screenshot of this website's resume webpage">
+                <p class="slideshow-caption" id="slideshow-caption-2">My first solo software project; this website!</p>
             </div>
             <div class="slideshow-display-container slideshow-hidden" id="slideshow-display-container-3" onclick="slideshowHandler(this.id)">
-                <img class="slideshow-image" id="slideshow-image-3"  src="/resume/images/ENG1013-project.jpg" alt="Breadboard used to house electronics coded in the ENG1013 team project">
-                <p class="slideshow-caption" id="slideshow-caption-3">The breadboard used to house the electronics that I coded in the team project for ENG1013</p> 
+                <img class="slideshow-image" id="slideshow-image-3"  src="/resume/images/Mck-sec-col.jpg" alt="The front of Mckinnon Secondary College seen from the roadside">
+                <p class="slideshow-caption" id="slideshow-caption-3">Where I completed VCE</p> 
             </div>            
             <div class="slideshow-display-container slideshow-far-left" id="slideshow-display-container-4" onclick="slideshowHandler(this.id)">
-                <img class="slideshow-image" id="slideshow-image-4"  src="/resume/images/rabbit.jpg" alt="A rabbit in snowy background">
-                <p class="slideshow-caption" id="slideshow-caption-4">A rabbit</p>
+                <img class="slideshow-image" id="slideshow-image-4"  src="/resume/images/McDonalds-logo.jpg" alt="The life-size Mcdonald's Logo present outside most McDonald's restaurants">
+                <p class="slideshow-caption" id="slideshow-caption-4">I worked as a team member at McDonalds</p>
             </div>
             <div class="slideshow-display-container slideshow-left" id="slideshow-display-container-5" onclick="slideshowHandler(this.id)">
-                <img class="slideshow-image" id="slideshow-image-5"  src="/resume/images/shark.jpg" alt="A shark underwater">
-                <p class="slideshow-caption" id="slideshow-caption-5">A shark</p>
+                <img class="slideshow-image" id="slideshow-image-5"  src="/resume/images/boosa-logo.png" alt="Logo of Boosa">
+                <p class="slideshow-caption" id="slideshow-caption-5">I worked as a kitchen hand at Boosa</p>
             </div>
             <div class="slideshow-display-container slideshow-centre" id="slideshow-display-container-6" onclick="slideshowHandler(this.id)">
                 <img class="slideshow-image" id="slideshow-image-6"  src="/resume/images/Monash-logo.svg" alt="Monash University Logo">
-                <p class="slideshow-caption" id="slideshow-caption-6">Logo of the university I am completing my degree at</p> 
+                <p class="slideshow-caption" id="slideshow-caption-6">The university I am completing my degree at</p> 
             </div>
         <nav class="slideshow-navbar">
             <div class="slideshow-locator active-slideshow-locator" id="slideshow-locator-1" onclick="slideshowHandler(this.id)"></div>
@@ -61,7 +63,7 @@
         </nav>
     </section>
     <footer>
-        <a id="contact-button" href="profile.html" onmouseenter="hyperlinkHandler('contact-button',1)" onmouseleave="hyperlinkHandler('contact-button',0)">Contact Me</a>
+        <a id="contact-button" href="profile.html">Contact Me</a>
         <img id="footer-logo" src="/resume/images/footer-logo.svg"></img>
         <div id="trademark-section"><span>&copy;</span> Connor Macdougall, 2022</div>
     </footer>
