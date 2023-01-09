@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+    <link rel="icon" type="image/png" href="/resume/images/favicon.png">
+    <title>Connor Macdougall - Projects</title>
+</head>
+<body id="background">
+    <header id="header">
+        <nav id="navbar">
+                <div id="navbar-title">Connor Macdougall</div>
+                <div id="navbar-locators">
+                    <a class="navbar-locator not-current-location" id="home-button" href="index.html">Home</a>
+                    <a class="navbar-locator not-current-location" id="resume-button" href="resume.html">Resume</a>
+                    <a class="navbar-locator current-location" id="projects-button">Projects</a>
+                    <a class="navbar-locator not-current-location" id="profile-button" href="profile.html">Profile</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="scroll-hidden" id="projects-introduction-text-grid">
+        <h1 id="projects-introduction-text">Working in a Team <em>and</em>&nbsp; Individually.</h1></div>
+    <div class="scroll-hidden" id="projects-options">
+        <section id="projects-filters">
+            <h2 id="filter-title">Filters</h2>
+            <div id="filter-list">
+                <div class="filter html-filter" id="html-filterer" onclick="projectFilterHandler('html')">HTML</div>
+                <div class="filter css-filter" id="css-filterer" onclick="projectFilterHandler('css')">CSS</div>
+                <div class="filter js-filter" id="js-filterer" onclick="projectFilterHandler('js')">JavaScript</div>
+            </div>
+        </section>
+        <section id="projects-ordering">Sort
+            <select class="ordering-selector" id="project-type-selector" onchange="projectFilterHandler('project-type')">
+                <option class="ordering-selector-option" value="0">All Projects</option>
+                <option class="ordering-selector-option" value="1">Only Team Projects</option>
+                <option class="ordering-selector-option" value="2">Only Individual Projects</option>
+            </select>
+            <select class="ordering-selector" id="chronological-order-selector" onchange="projectFilterHandler('project-chronological-order')">
+                <option class="ordering-selector-option" value="0">Latest First</option>
+                <option class="ordering-selector-option" value="1">Earliest First</option>
+            </select>
+        </section>
+    </div>
+    <section class="project-list-latest" id="project-list">
+        <!-- <div class="scroll-hidden project team-project js" id="project-2">
+            <div class="project-image-container">
+                <img class="project-image" id="project-image-2" src="/resume/images/resume-website-screenshot.png" alt="Screenshot of this website's resume webpage">
+            </div>
+            <div class="project-text" id="project-text-2">Team
+                <h3 class="project-title" id="project-title-2">Group Website</h3>
+                <div class="project-subtitle" id="project-subtitle-2">January 2023</div>
+                <div class="project-filters" id="project-filters-2">Categories:
+                    <div class="project-filter js-filter">JavaScript</div>
+                </div>
+                <li class="project-explanation">I did the JavaScript code for this website</li>
+            </div>
+        </div> -->
+        <div class="scroll-hidden project individual-project html css js" id="project-1">
+            <div class="project-image-container">
+                <img class="project-image" id="project-image-1" src="/resume/images/resume-website-screenshot.png" alt="Screenshot of this website's resume webpage">
+            </div>
+            <div class="project-text" id="project-text-1">Individual
+                <div class="project-title-and-link" id="project-title-and-link-1">
+                    <h3 class="project-title" id="project-title-1">Personal Website</h3>
+                    <a href="https://github.com/Connor2023/resume" target="_blank" title="Open GitHub Repository">
+                        <img src="/resume/images/box.png" alt="An opened box" class="project-link" id="project-link-1">
+                    </a>
+                </div>
+                <div class="project-subtitle" id="project-subtitle-1">December 2022 - Present</div>
+                <div class="project-filters" id="project-filters-1">Categories:
+                    <div class="project-filter html-filter">HTML</div>
+                    <div class="project-filter css-filter">CSS</div>
+                    <div class="project-filter js-filter">JavaScript</div>
+                </div>
+                <li class="project-explanation">Continuously updated</li>
+                <li class="project-explanation">Aims to be minimalistic, and for functionality to be meaningful</li>
+                <li class="project-explanation">Detailed update log demonstrates organisation and communication</li>
+            </div>
+        </div>
+    </section>
+    <section id="footnotes">Please note: The date at which the project began is the date upon which the projects are ordered by.
+    </section>
+    <footer id="projects-footer">
+        <a id="contact-button" href="profile.html">Contact Me</a>
+        <img id="footer-logo" src="/resume/images/footer-logo.svg"></img>
+        <div id="trademark-section"><span>&copy;</span> Connor Macdougall, 2022</div>
+    </footer>
+</body>
+</html>
