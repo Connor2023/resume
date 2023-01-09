@@ -14,40 +14,57 @@
         <nav id="navbar">
                 <div id="navbar-title">Connor Macdougall</div>
                 <div id="navbar-locators">
-                    <a class="navbar-locator" id="home-button" href="index.html" onmouseenter="hyperlinkHandler('home-button',1)" onmouseleave="hyperlinkHandler('home-button',0)">Home</a>
+                    <a class="navbar-locator not-current-location" id="home-button" href="index.html">Home</a>
                     <a class="navbar-locator current-location" id="resume-button">Resume</a>
-                    <a class="navbar-locator" id="profile-button" href="profile.html" onmouseenter="hyperlinkHandler('profile-button',1)" onmouseleave="hyperlinkHandler('profile-button',0)">Profile</a>
+                    <a class="navbar-locator not-current-location" id="projects-button" href="projects.html">Projects</a>
+                    <a class="navbar-locator not-current-location" id="profile-button" href="profile.html">Profile</a>
                 </div>
             </div>
         </nav>
     </header>
-    <section id="timeline"></section>
     <div class="scroll-hidden" id="resume-introduction-text-grid">
         <h1 id="resume-introduction-text">My <em>experience</em>. At your convenience.</h1></div>
     <div class="scroll-hidden" id="resume-options">
         <section id="resume-filters">
             <h2 id="filter-title">Filters</h2>
             <div id="filter-list">
-                <div class="filter software-filter">Software</div>
-                <div class="filter education-filter">Education</div>
-                <div class="filter hospitality-filter">Hospitality</div>
-                <div class="filter community-filter">Community</div>
-                <div class="filter teamwork-filter">Teamwork</div>
+                <div class="filter software-filter" id="software-filterer" onclick="resumeFilterHandler('software')">Software</div>
+                <div class="filter education-filter" id="education-filterer" onclick="resumeFilterHandler('education')">Education</div>
+                <div class="filter hospitality-filter" id="hospitality-filterer" onclick="resumeFilterHandler('hospitality')">Hospitality</div>
+                <div class="filter community-filter" id="community-filterer" onclick="resumeFilterHandler('community')">Community</div>
+                <div class="filter teamwork-filter" id="teamwork-filterer" onclick="resumeFilterHandler('teamwork')">Teamwork</div>
             </div>
         </section>
         <section id="resume-ordering">Sort
-            <select class="ordering-selector" id="experience-type-selector">
+            <select class="ordering-selector" id="experience-type-selector" onchange="resumeFilterHandler('experience-type')">
                 <option class="ordering-selector-option" value="0">All Experiences</option>
                 <option class="ordering-selector-option" value="1">Only Major Experiences</option>
             </select>
-            <select class="ordering-selector" id="chronological-order-selector">
-                <option class="ordering-selector-option" value="0">Recent-Oldest</option>
-                <option class="ordering-selector-option" value="1">Oldest-Recent</option>
+            <select class="ordering-selector" id="chronological-order-selector" onchange="resumeFilterHandler('experience-chronological-order')">
+                <option class="ordering-selector-option" value="0">Latest First</option>
+                <option class="ordering-selector-option" value="1">Earliest First</option>
             </select>
         </section>
     </div>
-    <section class="experience-list-recent" id="experience-list">
-        <div class="scroll-hidden experience" id="experience-4">
+    <section class="experience-list-latest" id="experience-list">
+        <div class="scroll-hidden experience major-experience software education teamwork" id="experience-3">
+            <div class="experience-image-container">
+                <img class="experience-image" id="experience-image-3" src="/resume/images/Monash-logo.svg" alt="Logo of Monash University">
+            </div>
+            <div class="experience-text" id="experience-text-3">
+                <h3 class="experience-title" id="experience-title-3">Monash University - Student</h3>
+                <div class="experience-subtitle" id="experience-subtitle-3">Clayton, 2022 - Present</div>
+                <div class="experience-filters" id="experience-filters-3">Categories:
+                    <div class="experience-filter software-filter">Software</div>
+                    <div class="experience-filter education-filter">Education</div>
+                    <div class="experience-filter teamwork-filter">Teamwork</div>
+                </div>
+                <li class="experience-explanation">Completing a Bachelor of Engineering (Honours), specialising in Software Engineering</li>
+                <li class="experience-explanation">Current WAM is 90.44</li>
+                <li class="experience-explanation">Learnt the foundations of each specialisation to streamline multidisciplinary teamwork</li>
+            </div>
+        </div>
+        <div class="scroll-hidden experience major-experience hospitality teamwork" id="experience-4">
             <div class="experience-image-container">
                 <img class="experience-image" id="experience-image-4" src="/resume/images/boosa-logo.png" alt="Logo of Boosa">
             </div>
@@ -63,26 +80,9 @@
                 <li class="experience-explanation">Independently completed closing tasks to a high standard</li>
             </div>
         </div>
-        <div class="scroll-hidden experience" id="experience-3">
+        <div class="scroll-hidden experience major-experience hospitality teamwork" id="experience-2">
             <div class="experience-image-container">
-                <img class="experience-image" id="experience-image-3" src="/resume/images/Monash-logo.svg" alt="Logo of Monash University">
-            </div>
-            <div class="experience-text" id="experience-text-3">
-                <h3 class="experience-title" id="experience-title-3">Monash University - Student</h3>
-                <div class="experience-subtitle" id="experience-subtitle-3">Clayton, 2022 onwards</div>
-                <div class="experience-filters" id="experience-filters-3">Categories:
-                    <div class="experience-filter software-filter">Software</div>
-                    <div class="experience-filter education-filter">Education</div>
-                    <div class="experience-filter teamwork-filter">Teamwork</div>
-                </div>
-                <li class="experience-explanation">Completing a Bachelor of Engineering (Honours), specialising in Software Engineering</li>
-                <li class="experience-explanation">Current WAM is 90.44</li>
-                <li class="experience-explanation">Learnt the foundations of each specialisation to streamline multidisciplinary teamwork</li>
-            </div>
-        </div>
-        <div class="scroll-hidden experience" id="experience-2">
-            <div class="experience-image-container">
-                <img class="experience-image" id="experience-image-2" src="/resume/images/McDonalds-logo.jpg" alt="Image of the life-size Mcdonald's Logo present outside most McDonald's restaurants">
+                <img class="experience-image" id="experience-image-2" src="/resume/images/McDonalds-logo.jpg" alt="The life-size Mcdonald's Logo present outside most McDonald's restaurants">
             </div>
             <div class="experience-text" id="experience-text-2">
                 <h3 class="experience-title" id="experience-title-2">McDonald's - Crew Member</h3>
@@ -96,9 +96,9 @@
                 <li class="experience-explanation">Diligent time management outside of work to optimise availability</li>
             </div>
         </div>
-        <div class="scroll-hidden experience" id="experience-1">
+        <div class="scroll-hidden experience major-experience software education community" id="experience-1">
             <div class="experience-image-container">
-                <img class="experience-image" id="experience-image-1" src="/resume/images/Mck-sec-col.jpg" alt="Image of the front of McKinnon Secondary College">
+                <img class="experience-image" id="experience-image-1" src="/resume/images/Mck-sec-col.jpg" alt="The front of Mckinnon Secondary College seen from the roadside">
                 <a href="#footnote-1" class="experience-image-reference" id="experience-image-reference-1">[1]</a>
             </div>
             <div class="experience-text" id="experience-text-1">
@@ -114,7 +114,7 @@
                 <li class="experience-explanation">Completed work experience where I worked as an IT asssistant for the school, supporting logistics to maintain school hardware and software</li>
             </div>
         </div>
-        <div class="scroll-hidden minor-experience" id="minor-experience-1">
+        <div class="scroll-hidden experience minor-experience community teamwork" id="minor-experience-1">
             <div class="minor-experience-headings" id="minor-experience-headings-1">
                 <h4 class="minor-experience-title" id="minor-experience-title-1">Hampton Junior Soccer Club - Soccer Player</h4>
                 <div class="minor-experience-subtitle" id="minor-experience-subtitle-1">Hampton, 2019</div>
@@ -125,11 +125,11 @@
             </div>
             <li class="minor-experience-explanation">Helped building teamwork skills, and the importance of discipline surrounding training and when recovering from a season-ending ankle injury</li>
     </section>
-    <section id="footnotes">Please note: The date at which the experience began is the date upon which the experiences are ordered by.
-        <p id="footnote-1">[1] Image issued under a Creative Commons License, author: Celco85, image has not been altered, link: <a id="footnote-link-1" onmouseover="hyperlinkHandler('footnote-link-1',1)" onmouseleave="hyperlinkHandler('footnote-link-1',0)" href="https://commons.wikimedia.org/wiki/File:Mckinnoncollege.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Mckinnoncollege.jpg</a></p>
+    <section id="footnotes">Please note: The date at which the experience was completed is the date upon which the experiences are ordered by.
+        <p id="footnote-1">[1] Image issued under a Creative Commons License, author: Celco85, image has not been altered, link: <a id="footnote-link-1" href="https://commons.wikimedia.org/wiki/File:Mckinnoncollege.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Mckinnoncollege.jpg</a></p>
     </section>
     <footer id="resume-footer">
-        <a id="contact-button" href="profile.html" onmouseenter="hyperlinkHandler('contact-button',1)" onmouseleave="hyperlinkHandler('contact-button',0)">Contact Me</a>
+        <a id="contact-button" href="profile.html">Contact Me</a>
         <img id="footer-logo" src="/resume/images/footer-logo.svg"></img>
         <div id="trademark-section"><span>&copy;</span> Connor Macdougall, 2022</div>
     </footer>
