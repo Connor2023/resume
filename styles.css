@@ -1,7 +1,11 @@
 /* General CSS Styling */
+@font-face {
+    font-family: 'Hauora Sans';
+    src: url(/resume/HauoraSansFontsOTF/Hauora-Regular.otf);
+}
 * {
     color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Hauora Sans';
     text-decoration: none;
     margin: 0px;
 }
@@ -10,8 +14,6 @@ html, body {
 }
 body {
     margin: 0px;
-}
-#background {
     background-color: black;
 }
 
@@ -35,7 +37,7 @@ body {
 }
 #navbar {
     display: grid;
-    grid-template-columns: minmax(200px,55%) minmax(0px, 100%-580px) minmax(150px,30%);
+    grid-template-columns: minmax(200px,55%) minmax(0px, 100%-580px) minmax(150px,35%);
     font-size: 18px;
     padding: 10px 0px;
 }
@@ -49,12 +51,15 @@ body {
 }
 .navbar-locator {
     color: rgb(200, 200, 200);
-    font-size: clamp(18px,1.7vw,24px);
+    font-size: clamp(18px,1.5vw,24px);
     font-weight: bolder;
     margin: 5px 5px;
 }
+.not-current-location:hover {
+    text-decoration: underline;
+}
 .current-location {
-    font-size: clamp(20px,2vw,30px);
+    font-size: clamp(20px,1.8vw,30px);
     color: white;
 }
 
@@ -74,6 +79,9 @@ footer {
     font-size: clamp(15px,1.5vw,20px);
     place-self: center;
     margin-bottom: 15px;
+}
+#contact-button:hover {
+    text-decoration: underline;
 }
 #footer-logo {
     height: 70px;
@@ -114,13 +122,19 @@ footer {
 }
 
 
+#slideshow-title {
+    margin: 40px 0px 0px;
+    display: block;
+    text-align: center;
+    font-size: clamp(20px,1.67vw,40px);;
+}
 #slideshow {
     display: grid;
     grid: auto 35px / 15% 70% 15%;
     place-items: center;
+    place-content: center;
     overflow-x: hidden;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
     width: 100%;
 }
 .slideshow-display-container {
@@ -164,6 +178,10 @@ footer {
 .slideshow-hidden {
     display: none;
 }
+#slideshow-image-5 {
+    background-color: rgb(255, 255, 255);
+    object-fit: contain;
+}
 #slideshow-image-6 {
     background-color: rgba(255, 255, 255, 0.8);
     object-fit: contain;
@@ -197,17 +215,17 @@ footer {
 
 
 /* Resume CSS Styling */
-#resume-introduction-text-grid {
+#resume-introduction-text-grid, #projects-introduction-text-grid {
     display: grid;
     grid: 100% / 10% 80% 10%;
 }
-#resume-introduction-text {
+#resume-introduction-text, #projects-introduction-text {
     font-size: 40px;
     grid-column: 2 / span 1;
     margin: 130px 0px 30px;
 }
-#resume-options {
-    margin: 25px 5vw;
+#resume-options, #projects-options {
+    margin: 25px 5vw 50px;
     border-radius: 30px;
     display: flex;
     flex-flow: wrap;
@@ -215,8 +233,9 @@ footer {
     max-width: 700px;
     background: rgb(70, 70, 70);
     width: auto;
+    border: 2px solid white;
 }
-#resume-filters {
+#resume-filters, #projects-filters {
     border-radius: 30px;
     padding: 5px 5px 5px 15px;
     display: flex;
@@ -239,7 +258,9 @@ footer {
     border: 2px solid white;
     border-radius: 10px;
     padding: 1px 5px;
-    margin: 2px 4px;
+    margin: 2px 6px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
 }
 .software-filter {
     background-color: rgba(0, 140, 255, 0.6);
@@ -256,7 +277,20 @@ footer {
 .teamwork-filter {
     background-color: rgb(255, 0, 0);
 }
-#resume-ordering {
+.html-filter {
+    background-color: rgba(255, 166, 0, 0.9);
+}
+.css-filter {
+    background-color: rgb(255, 255, 0);
+    color: black;
+}
+.js-filter {
+    background-color: purple;
+}
+.filter-selected {
+    transform: scale(115%);
+}
+#resume-ordering, #projects-ordering {
     font-size: 18px;
     display: flex;
     align-items: baseline;
@@ -269,6 +303,7 @@ footer {
     margin: 5px 5px 5px 10px;
     border: none;
     width: auto;
+    cursor: pointer;
 }
 .ordering-selector-option {
     background: rgb(70, 70, 70);
@@ -279,61 +314,97 @@ footer {
 
 
 
-#experience-list {
+#experience-list, #project-list {
     display: flex;
     margin: 0px 5%;
 }
-.experience-list-oldest {
-    flex-flow: column-reverse;
-}
-.experience-list-recent {
+.experience-list-latest, .project-list-latest {
     flex-flow: column;
 }
-.experience {
+.experience-list-earliest, .project-list-earliest {
+    flex-flow: column-reverse;
+}
+.major-experience, .project {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
-    margin-bottom: 20px;
+    margin: 15px 0px;
     padding: 10px;
     border-radius: 15px;
     background-image: linear-gradient(rgba(0, 0, 255, 0.2),rgba(128, 128, 128, 0.2));
     border: 1px solid grey;
 }
-.experience-text {
+.experience, .project {
+    background-color: black;
+}
+.team-project {
+    background-image: linear-gradient(rgba(255, 0, 0, 0.2),rgba(128, 128, 128, 0.2));
+}
+.experience-text, .project-text {
     grid-row: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
     margin: 5px 5%;
     grid-column: 1 / span 2;
+    font-size: 20px;
+    font-style: italic;
 }
-.experience-title {
+.project-title-and-link {
+    display: flex;
+}
+.project-link {
+    margin-left: 20px;
+    border-radius: 18px;
+    height: 30px;
+    padding: 3px;
+    width: 30px;
+    font-size: 15px;
+    font-style: normal;
+    align-self: center;
+    transition: all 0.3s ease-out;
+    background-color: white;
+}
+.project-link:hover {
+    transform: scale(125%);
+    margin-left: 25px;
+}
+.experience-title, .project-title {
     font-size: 25px;
+    font-style: normal;
 }
-.experience-filters {
+.experience-subtitle, .project-subtitle {
+    font-size: 15px;
+    font-style: normal;
+}
+.experience-filters, .project-filters {
     display: flex;
     flex-flow: wrap;
     align-items: center;
     margin-left: 2%;
+    font-size: 15px;
+    font-style: normal;
 }
-.experience-filter {
+.experience-filter, .project-filter {
     border: 1px solid black;
     padding: 1px 5px;
     border-radius: 15px;
     margin: 5px;
     font-size: 13px;
 }
-.experience-explanation {
+.experience-explanation, .project-explanation {
     margin-left: 8%;
     text-indent: -22px;
+    font-size: 15px;
+    font-style: normal;
 }
-.experience-image-container {
+.experience-image-container, .project-image-container {
     display: flex;
     align-content: flex-start;
     height: 100%;
     grid-column: 3 / span 1;
 }
-.experience-image {
+.experience-image, .project-image {
     width: 95%;
     object-fit: contain;
     border-radius: 25px;
@@ -349,13 +420,14 @@ footer {
 .minor-experience {
     display: flex;
     flex-flow: column;
-    margin-bottom: 20px;
+    margin: 5px 0px;
     padding: 8px;
     border-radius: 15px;
     width: 80%;
     align-self: center;
     justify-content: center;
     background-image: linear-gradient(rgba(128, 128, 128, 0.2),rgba(255, 255, 255, 0.2));
+    border: 1px solid grey;
 }
 .minor-experience-headings {
     display: flex;
@@ -388,31 +460,17 @@ footer {
     text-indent: -22px;
     font-size: 14px;
 }
-
-
-
-/* Potential Resume Functionality */
-.experience-text-left {
-    grid-column: 1 / span 2;
-}
-.experience-text-right {
-    grid-column: 2 / span 2;
-}
-.experience-image-container-right {
-    grid-column: 3 / span 1;
-}
-.experience-image-container-left {
-    grid-column: 1 / span 1;
-}
-
-
 #footnotes {
+    margin-top: 50px;
     padding: 5px 5px 10px 20px;
     border-top: 1px solid white;
     background-color: rgb(40, 40, 40);
     font-size: 15px;
 }
-#resume-footer {
+#footnote-link-1:hover {
+    text-decoration: underline;
+}
+#resume-footer, #projects-footer {
     border: none;
 }
 
@@ -431,6 +489,8 @@ footer {
     display: flex;
     place-items: center;
     place-content: center;
+    grid-row: 1 / span 2;
+    margin-right: 20px;
 }
 #profile-photo {
     font-size: 20px;
@@ -440,7 +500,7 @@ footer {
 }
 #about-me-section {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
 }
 .about-me-sub-section {
     background-color: rgb(50, 50, 50);
@@ -448,12 +508,11 @@ footer {
     padding: 10px;
 }
 #about-me-text {
-    margin-left: 20px;
     padding: 5px 10px;
 }
 .profile-details {
     background-color: rgb(30, 30, 30);
-    box-shadow: 2px 2px white;
+    box-shadow: 1px 1px white;
     border-radius: 15px;
     padding: 2px 10px 5px;
     margin-bottom: 10px;
@@ -474,16 +533,19 @@ footer {
 }
 #profile-career {
     color: rgb(100, 100, 255);
-    font-size: clamp(25px,3.2vw,50px);
+    font-size: clamp(20px,2.7vw,40px);
 }
 #contact-details {
-    margin-top: 20px;
-    padding: 0px 10px;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.7),rgb(50, 50, 50));
+    grid-column: 2 / span 1;
     display: flex;
-    place-content: center;
-    place-items: center ;
+    flex-flow: column;
+    place-items: center;
+    margin-top: 20px;
+    padding: 2px 0px 0px;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.7),rgb(50, 50, 50));
     border-radius: 30px;
+    box-shadow: 2px 2px white;
+    font-weight: bolder;
 }
 #profile-bio {
     font-size: clamp(15px,1vw,45px);
@@ -492,45 +554,58 @@ footer {
 .contact-option {
     display: flex;
     place-items: center;
-    margin: 5px 20px;
+    margin: 5px 0px;
     border-radius: 10px;
     transition: all 1s;
     overflow-x: hidden;
-}
-#contact-option-1 {
-    transform: translateX(140px);
-}
-#contact-option-2 {
-    transform: translateX(140px);
+    font-weight: 500;
 }
 .contact-option-link {
-    margin: 0px 10px 0px -20px;
+    transition: all 1s;
+}
+#contact-option-1:hover  #contact-option-logo-1 {
+    transform: translateX(0);
+}
+#contact-option-1:hover #contact-option-link-1 {
+    transform: translateX(0) scaleX(100%);
+}
+#contact-option-2:hover  #contact-option-logo-2 {
+    transform: translateX(0);
+}
+#contact-option-2:hover #contact-option-link-2 {
+    transform: translateX(0) scaleX(100%);
+}
+#contact-option-3:hover  #contact-option-logo-3 {
+    transform: translateX(0);
+}
+#contact-option-3:hover #contact-option-link-3 {
+    transform: translateX(0) scaleX(100%);
+}
+.contact-option-link {
+    margin-left: -15px;
     text-align: center;
     transition: all 1s;
     color: black;
     background-color: white;
-    padding: 13px 0px 14px 20px;
+    padding: 11px 0px 12px 15px;
     border-radius: 10px;
 }
 #contact-option-link-1 {
-    width: 115px;
-    transform: translateX(-110%);
-}
-#contact-option-1:hover #contact-option-link-1 {
-    transform: translateX(0%);
-}
-#contact-option-1:hover {
-    transform: translateX(82.5px);
+    width: 110px;
+    transform: translateX(-30%) scaleX(60%);
 }
 #contact-option-link-2 {
-    width: 270px;
-    transform: translateX(-100%);
+    width: 260px;
+    height: 22px;
+    transform: translateX(-10%) scaleX(22%);
+    transition: all 1.66s;
 }
-#contact-option-2:hover #contact-option-link-2 {
-    transform: translateX(0%);
+#contact-option-link-3 {
+    width: 120px;
+    transform: translateX(-25%) scaleX(60%);
 }
-#contact-option-2:hover {
-    transform: translateX(5px);
+#contact-option-link-3:hover {
+    text-decoration: underline;
 }
 .contact-option-logo {
     width: 70px;
@@ -538,15 +613,33 @@ footer {
     object-fit: contain;
     background-color: white;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 4;
+    transition: all 1s;
 }
 #contact-option-logo-1 {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px;
+    transform: translateX(55px);
+}
+#contact-option-logo-2 {
+    transform: translateX(130px);
+    transition: all 1.5s;
+}
+#contact-option-logo-3 {
+    padding: 0px 5px;
+    transform: translateX(60px);
+}
+@media screen and (max-width: 650px) {
+    #contact-details {
+        grid-column: 1 / span 2;
+    }
+    #profile-photo-container {
+        grid-row: 1 / span 1;
+    }
 }
 #about-website {
     display: flex;
     flex-flow: column nowrap;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.7), rgb(50, 50, 50));
+    background-image: linear-gradient(rgb(117, 117, 117), rgb(50, 50, 50));
     padding: 10px 15px;
     margin: 20px;
     color: white;
@@ -563,6 +656,12 @@ footer {
     border-radius: 10px;
     font-size: 15px;
     width: fit-content;
+}
+#update-log-link {
+    color: rgb(50, 100, 255);
+}
+#update-log-link:hover {
+    text-decoration: underline;
 }
 .website-image-details {
     background-color: rgb(100, 100, 100);
@@ -595,3 +694,11 @@ footer {
         filter: blur(0);
         transform: translateX(0);
     }
+
+
+.filter-hidden {
+    display: none
+}
+.sort-hidden {
+    display: none
+}
