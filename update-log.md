@@ -1,6 +1,10 @@
 Update Log:
 
 
+  V2.1.0 (Not yet implemented)
+  - Made website ready for mobile phones too with responsive design (through CSS), and highlighted this in the 'about this website' section on the profile page (11/01/2023)
+  - Added a 'calming' CSS-based animation to the profile page (10/01/2023)
+
   V2.0.0
   3.50pm, 09/01/2023
   - Added links to projects on projects webpage
