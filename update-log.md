@@ -1,11 +1,12 @@
 Update Log:
 
 
-  V2.1.0 (Not yet implemented)
+  V2.1.0,
+  12:37pm, 15/01/2023
   - Made website ready for mobile phones too with responsive design (through CSS), and highlighted this in the 'about this website' section on the profile page (11/01/2023)
   - Added a 'calming' CSS-based animation to the profile page (10/01/2023)
 
-  V2.0.0
+  V2.0.0,
   3.50pm, 09/01/2023
   - Added links to projects on projects webpage
   - Completed addition of a projects webpage (08/01/2023)
@@ -19,11 +20,11 @@ Update Log:
   - Altered appearance of 'about website' section on profile webpage (31/02/2023)
 
 
-  V1.0.1
+  V1.0.1,
   10:55pm, 30/12/2022
   - Added a favicon to all currently available webpages and finalised website launch
 
 
-  V1.0.0
+  V1.0.0,
   10:00pm, 30/12/2022
   - Configured website for GitHub pages Launch after update by adjusting file paths within HTML code
