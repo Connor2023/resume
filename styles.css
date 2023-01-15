@@ -32,7 +32,7 @@ body {
     margin: 0px 5px;
     padding-left: 5px;
     place-self: center;
-    width: max-content;
+    text-align: center;
     font-weight: bolder;
 }
 #navbar {
@@ -90,6 +90,7 @@ footer {
     place-self: end;
     padding-bottom: 5px;
 }
+
 #trademark-section {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
@@ -153,9 +154,17 @@ footer {
 }
 .slideshow-image {
     width: 65vw;
-    height: 80vh;
+    height: 50vw;
     object-fit: cover;
     border-radius: 2vw;
+}
+@media screen and (min-width: 1000px) {
+    .slideshow-image {
+        width: 65vw;
+        height: 65vh;
+        object-fit: cover;
+        border-radius: 2vw;
+    }
 }
 .slideshow-transition {
     transition: all 1s ease-in-out;
@@ -183,7 +192,7 @@ footer {
     object-fit: contain;
 }
 #slideshow-image-6 {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255);
     object-fit: contain;
 }
 
@@ -217,15 +226,16 @@ footer {
 /* Resume CSS Styling */
 #resume-introduction-text-grid, #projects-introduction-text-grid {
     display: grid;
-    grid: 100% / 10% 80% 10%;
+    grid: auto / 10% 80% 10%;
 }
 #resume-introduction-text, #projects-introduction-text {
     font-size: 40px;
     grid-column: 2 / span 1;
-    margin: 130px 0px 30px;
+    margin: 100px 0px 0px;
+    align-self: center;
 }
 #resume-options, #projects-options {
-    margin: 25px 5vw 50px;
+    margin: 50px 5vw;
     border-radius: 30px;
     display: flex;
     flex-flow: wrap;
@@ -293,7 +303,11 @@ footer {
 #resume-ordering, #projects-ordering {
     font-size: 18px;
     display: flex;
+    flex-flow: wrap;
+    padding: 2px 5px;
+    justify-content: center;
     align-items: baseline;
+    font-weight: bolder;
 }
 .ordering-selector {
     color: white;
@@ -326,8 +340,8 @@ footer {
 }
 .major-experience, .project {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto;
     margin: 15px 0px;
     padding: 10px;
     border-radius: 15px;
@@ -341,12 +355,12 @@ footer {
     background-image: linear-gradient(rgba(255, 0, 0, 0.2),rgba(128, 128, 128, 0.2));
 }
 .experience-text, .project-text {
-    grid-row: 1;
+    grid-row: 1 / span 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
     margin: 5px 5%;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
     font-size: 20px;
     font-style: italic;
 }
@@ -400,20 +414,41 @@ footer {
 }
 .experience-image-container, .project-image-container {
     display: flex;
-    align-content: flex-start;
     height: 100%;
-    grid-column: 3 / span 1;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+@media screen and (max-width:600px) {
+    .experience-image-container, .project-image-container {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        padding: 20px;
+    }
+    .experience-text, .project-text {
+        grid-column: 1 / span 2;
+        margin: 5px 5% 20px;
+    }
+    .major-experience, .project {
+        padding-bottom: 50px;
+    }
 }
 .experience-image, .project-image {
-    width: 95%;
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
     border-radius: 25px;
 }
 #experience-image-3 {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(255, 255, 255);
+    object-fit: contain;
+}
+#experience-image-4 {
+    background-color: rgba(255, 255, 255);
+    object-fit: contain;
 }
 .experience-image-reference {
     font-size: 10px;
+    margin-left: -20px;
+    margin-top: 10px;
 }
 
 
@@ -421,7 +456,7 @@ footer {
     display: flex;
     flex-flow: column;
     margin: 5px 0px;
-    padding: 8px;
+    padding: 8px 8px 8px 16px;
     border-radius: 15px;
     width: 80%;
     align-self: center;
@@ -520,10 +555,13 @@ footer {
 }
 #profile-buzzwords-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     margin-bottom: 15px;
     font-size: clamp(12px,1vw,40px);
+}
+.profile-buzzwords {
+    margin: 0px 1px;
 }
 #profile-name-and-age {
     font-size: clamp(30px,4vw,60px);
@@ -636,6 +674,97 @@ footer {
         grid-row: 1 / span 1;
     }
 }
+
+
+#animated-section {
+    display: flex;
+    justify-content: center;
+}
+#animated-container {
+    display: flex;
+    flex-flow: nowrap;
+    height: 20px;
+    justify-content: center;
+    place-self: center;
+    margin-bottom: 50px;
+    --timing: 5;
+}
+.animated-block {
+    width: 5px;
+    margin-right: 1px;
+    height: 20px;
+    transform: scale(80%);
+    animation: wave infinite linear;
+    animation-duration: calc(1s*var(--timing));
+    border-radius: 5px;
+}
+#animated-block-2 {
+    animation-delay: calc(0.05s*var(--timing));
+}
+#animated-block-3 {
+    animation-delay: calc(0.1s*var(--timing));
+}
+#animated-block-4 {
+    animation-delay: calc(0.15s*var(--timing));
+}
+#animated-block-5 {
+    animation-delay: calc(0.2s*var(--timing));
+}
+#animated-block-6 {
+    animation-delay: calc(0.25s*var(--timing));
+}
+#animated-block-7 {
+    animation-delay: calc(0.3s*var(--timing));
+}
+#animated-block-8 {
+    animation-delay: calc(0.35s*var(--timing));
+}
+#animated-block-9 {
+    animation-delay: calc(0.4s*var(--timing));
+}
+#animated-block-10 {
+    animation-delay: calc(0.45s*var(--timing));
+}
+#animated-block-11 {
+    animation-delay: calc(0.5s*var(--timing));
+}
+#animated-block-12 {
+    animation-delay: calc(0.55s*var(--timing));
+}
+#animated-block-13 {
+    animation-delay: calc(0.6s*var(--timing));
+}
+#animated-block-14 {
+    animation-delay: calc(0.65s*var(--timing));
+}
+#animated-block-15 {
+    animation-delay: calc(0.7s*var(--timing));
+}
+#animated-block-16 {
+    animation-delay: calc(0.75s*var(--timing));
+}
+#animated-block-17 {
+    animation-delay: calc(0.8s*var(--timing));
+}
+#animated-block-18 {
+    animation-delay: calc(0.85s*var(--timing));
+}
+#animated-block-19 {
+    animation-delay: calc(0.9s*var(--timing));
+}
+#animated-block-20 {
+    animation-delay: calc(0.95s*var(--timing));
+}
+@keyframes wave {
+    0% {transform: scale(80%);
+    background-color: black;}
+    25% {transform: scale(150%);
+    background-color: rgb(0,255,0);}
+    50% {transform: scale(80%);
+    background-color: black;}
+}
+
+
 #about-website {
     display: flex;
     flex-flow: column nowrap;
