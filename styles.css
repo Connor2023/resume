@@ -1,7 +1,7 @@
 /* General CSS Styling */
 @font-face {
     font-family: 'Hauora Sans';
-    src: url(/resume/HauoraSansFontsOTF/Hauora-Regular.otf);
+    src: url(/HauoraSansFontsOTF/Hauora-Regular.otf);
 }
 * {
     color: white;
