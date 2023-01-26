@@ -18,7 +18,7 @@ body {
 }
 
 
-#header {
+.header {
     position: sticky;
     background-color: rgb(40, 40, 40);
     opacity: 0.95;
@@ -27,7 +27,7 @@ body {
     z-index: 999;
     border-bottom: 2px solid grey;
 }
-#navbar-title {
+.navbar-title {
     font-size: clamp(40px,4vw,50px);
     margin: 0px 5px;
     padding-left: 5px;
@@ -35,13 +35,13 @@ body {
     text-align: center;
     font-weight: bolder;
 }
-#navbar {
+.navbar {
     display: grid;
     grid-template-columns: minmax(200px,55%) minmax(0px, 100%-580px) minmax(150px,35%);
     font-size: 18px;
     padding: 10px 0px;
 }
-#navbar-locators {
+.navbar-locators {
     align-self: center;
     display: flex;
     flex-flow: row wrap;
@@ -72,7 +72,7 @@ footer {
     padding: 10px 0px 5px;
     border-top: 2px solid grey;
 }
-#contact-button {
+.contact-button {
     color: white;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -80,7 +80,7 @@ footer {
     place-self: center;
     margin-bottom: 15px;
 }
-#contact-button:hover {
+.contact-button:hover {
     text-decoration: underline;
 }
 #footer-logo {
@@ -378,6 +378,7 @@ footer {
     align-self: center;
     transition: all 0.3s ease-out;
     background-color: white;
+    color: black;
 }
 .project-link:hover {
     transform: scale(125%);
@@ -437,13 +438,10 @@ footer {
     object-fit: cover;
     border-radius: 25px;
 }
-#experience-image-3 {
+#experience-image-3, #experience-image-4 {
     background-color: rgb(255, 255, 255);
     object-fit: contain;
-}
-#experience-image-4 {
-    background-color: rgba(255, 255, 255);
-    object-fit: contain;
+    color: black;
 }
 .experience-image-reference {
     font-size: 10px;
@@ -571,7 +569,7 @@ footer {
 }
 #profile-career {
     color: rgb(100, 100, 255);
-    font-size: clamp(20px,2.7vw,40px);
+    font-size: clamp(15px,2vw,30px);
 }
 #contact-details {
     grid-column: 2 / span 1;
@@ -593,6 +591,7 @@ footer {
     display: flex;
     place-items: center;
     margin: 5px 0px;
+    padding-top: 5px;
     border-radius: 10px;
     transition: all 1s;
     overflow-x: hidden;
@@ -635,12 +634,12 @@ footer {
 #contact-option-link-2 {
     width: 260px;
     height: 22px;
-    transform: translateX(-10%) scaleX(22%);
+    transform: translateX(-10%) scaleX(20%);
     transition: all 1.66s;
 }
 #contact-option-link-3 {
     width: 120px;
-    transform: translateX(-25%) scaleX(60%);
+    transform: translateX(-25%) scaleX(50%);
 }
 #contact-option-link-3:hover {
     text-decoration: underline;
@@ -653,6 +652,7 @@ footer {
     border-radius: 10px;
     z-index: 4;
     transition: all 1s;
+    color: black;
 }
 #contact-option-logo-1 {
     padding: 0px 10px;
@@ -674,7 +674,6 @@ footer {
         grid-row: 1 / span 1;
     }
 }
-
 
 
 #about-website {
