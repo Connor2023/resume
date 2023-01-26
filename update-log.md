@@ -1,6 +1,12 @@
 Update Log:
 
 
+  V2.1.1,
+  9:08pm, 26/01/2023
+  - Launched website to a new personalised domain, and adjusted file paths as required (26/01/2023)
+  - Removed CSS-based animation to preserve minimal look of website, and removed defunct code in projects page which had been used to test filtering functionality (15/01/2023)
+
+
   V2.1.0,
   12:37pm, 15/01/2023
   - Made website ready for mobile phones too with responsive design (through CSS), and highlighted this in the 'about this website' section on the profile page (11/01/2023)
