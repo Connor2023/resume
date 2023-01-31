@@ -32,6 +32,8 @@
                 <div class="filter html-filter" id="html-filterer" onclick="projectFilterHandler('html')">HTML</div>
                 <div class="filter css-filter" id="css-filterer" onclick="projectFilterHandler('css')">CSS</div>
                 <div class="filter js-filter" id="js-filterer" onclick="projectFilterHandler('js')">JavaScript</div>
+                <div class="filter cpp-filter" id="cpp-filterer" onclick="projectFilterHandler('cpp')">C++</div>
+                <div class="filter python-filter" id="python-filterer" onclick="projectFilterHandler('python')">Python</div>
             </div>
         </section>
         <section id="projects-ordering">Sort
@@ -47,8 +49,44 @@
         </section>
     </div>
     <section class="project-list-latest" id="project-list">
+        <div class="scroll-hidden project team-project python" id="project-3">
+            <div class="project-image-container" id="project-image-container-3">
+                <img class="project-image" id="project-image-3" src="" alt="Currently in development">
+            </div>
+            <div class="project-text" id="project-text-3">Team
+                <div class="project-title-and-link" id="project-title-and-link-3">
+                    <h3 class="project-title" id="project-title-1">Finance (Shares) Information App</h3>
+                    <a href="https://github.com/Connor2023/TeamApp" target="_blank" title="Open GitHub Repository">
+                        <img src="/images/box.png" alt="An opened box" class="project-link" id="project-link-3">
+                    </a>
+                </div>
+                <div class="project-subtitle" id="project-subtitle-3">January 2023 - Present</div>
+                <div class="project-filters" id="project-filters-3">Categories:
+                    <div class="project-filter python-filter">Python</div>
+                </div>
+                <li class="project-explanation">Uses python API library to obtain finance data from official exchanges, and display it with innovative features</li>
+                <li class="project-explanation">Clear organisation, deadlines and goals were set, seen through the full meeting minutes found in the GitHub repository</li>
+                <li class="project-explanation">Current phase of development is focusing on optimising raw data collection</li>
+            </div>
+        </div>
+        <div class="scroll-hidden project individual-project cpp" id="project-2">
+            <div class="project-image-container" id="project-image-container-2">
+                <img class="project-image" id="project-image-2" src="" alt="Currently in development">
+            </div>
+            <div class="project-text" id="project-text-2">Individual
+                <div class="project-title-and-link" id="project-title-and-link-1">
+                    <h3 class="project-title" id="project-title-2">Car Game</h3>
+                </div>
+                <div class="project-subtitle" id="project-subtitle-2">January 2023 - Present</div>
+                <div class="project-filters" id="project-filters-2">Categories:
+                    <div class="project-filter cpp-filter">C++</div>
+                </div>
+                <li class="project-explanation">Made using SFML, aiming to be a simplistic, arcade-style game</li>
+                <li class="project-explanation">Currently unavailable publicly, and car functionality is being created</li>
+            </div>
+        </div>
         <div class="scroll-hidden project individual-project html css js" id="project-1">
-            <div class="project-image-container">
+            <div class="project-image-container" id="project-image-container-1">
                 <img class="project-image" id="project-image-1" src="/images/resume-website-screenshot.png" alt="Screenshot of this website's resume webpage">
             </div>
             <div class="project-text" id="project-text-1">Individual
