@@ -1,6 +1,14 @@
 Update Log:
 
 
+  V2.1.2,
+  1:43pm, 31/01/2023
+  - Updated stylesheet accordingly for all other changes completed on 31/01/2023 (31/01/2023)
+  - Added experiences "RSA certificate" to resume page (31/01/2023)
+  - Added projects "Car Game" and "Team Application" to projects page (31/01/2023)
+  - Updated slideshow images on homepage (31/01/2023)
+
+
   V2.1.1,
   9:42pm, 26/01/2023
   - Changed the CSS specifier used for 'navbar' html elements to 'class' instead of 'id'  (26/01/2023)
