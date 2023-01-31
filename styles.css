@@ -187,12 +187,8 @@ footer {
 .slideshow-hidden {
     display: none;
 }
-#slideshow-image-5 {
+#slideshow-image-5, #slideshow-image-6 {
     background-color: rgb(255, 255, 255);
-    object-fit: contain;
-}
-#slideshow-image-6 {
-    background-color: rgba(255, 255, 255);
     object-fit: contain;
 }
 
@@ -296,6 +292,12 @@ footer {
 }
 .js-filter {
     background-color: purple;
+}
+.cpp-filter {
+    background-color: red;
+}
+.python-filter {
+    background-color: blue;
 }
 .filter-selected {
     transform: scale(115%);
@@ -436,11 +438,12 @@ footer {
 .experience-image, .project-image {
     width: 100%;
     object-fit: cover;
+    text-align: center;
     border-radius: 25px;
 }
 #experience-image-3, #experience-image-4 {
-    background-color: rgb(255, 255, 255);
     object-fit: contain;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 .experience-image-reference {
