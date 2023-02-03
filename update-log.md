@@ -1,6 +1,11 @@
 Update Log:
 
 
+  V2.1.3,
+  3:55pm, 03/02/2023
+  - Updated stylesheet to enhance phone functionality of webpages, targeting the 'profile' page (03/02/2023)
+
+
   V2.1.2,
   1:43pm, 31/01/2023
   - Updated stylesheet accordingly for all other changes completed on 31/01/2023 (31/01/2023)
