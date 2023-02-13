@@ -1,6 +1,13 @@
 Update Log:
 
 
+  V2.1.4,
+  7:42pm, 13/02/2023
+  - Updated stylesheet to account for unintended consequence of previous change of footer columns (13/02/2023)
+  - Added gradient-text to 'Welcome!' title on index webpage (13/02/2023)
+  - Slightly altered the content of the 'welcome-introduction-text' on index webpage (13/02/2023)
+
+
   V2.1.3,
   3:55pm, 03/02/2023
   - Updated stylesheet to enhance phone functionality of webpages, targeting the 'profile' page (03/02/2023)
