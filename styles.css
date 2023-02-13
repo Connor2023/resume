@@ -66,7 +66,7 @@ body {
 
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 70px;
+    grid-template-columns: 70px 1fr 70px;
     grid-template-rows: 50px 20px;
     background-color: rgb(40, 40, 40);
     padding: 10px 0px 5px;
@@ -115,7 +115,7 @@ footer {
 #welcome {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 20px minmax();
+    grid-template-rows: auto auto;
     place-content: center;
 }
 .introduction-text {
@@ -126,9 +126,13 @@ footer {
 }
 #welcome-header {
     grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
     font-size: clamp(25px,3vw,50px);
     margin: 20px 0px 0px;
-    color: rgb(50, 50, 255);
+    background: -webkit-linear-gradient(blue, purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
