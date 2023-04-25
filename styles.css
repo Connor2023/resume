@@ -296,6 +296,9 @@ footer {
 .teamwork-filter {
     background-color: rgb(255, 0, 0);
 }
+.customer-service-filter {
+    background-color: rgba(242, 0, 255, 0.79);
+}
 .html-filter {
     background-color: rgba(255, 166, 0, 0.9);
 }
@@ -311,6 +314,9 @@ footer {
 }
 .python-filter {
     background-color: blue;
+}
+.java-filter {
+    background-color: rgba(0, 255, 0, 0.8);
 }
 .filter-selected {
     transform: scale(115%);
@@ -367,7 +373,7 @@ footer {
     background-color: black;
 }
 .team-project {
-    background-image: linear-gradient(rgba(255, 0, 0, 0.2),rgba(128, 128, 128, 0.2));
+    background-image: linear-gradient(rgba(255, 0, 234, 0.2),rgba(128, 128, 128, 0.2));
 }
 .experience-text, .project-text {
     grid-row: 1 / span 1;
@@ -454,10 +460,13 @@ footer {
     text-align: center;
     border-radius: 25px;
 }
-#experience-image-3, #experience-image-4 {
+#experience-image-3, #experience-image-4, #experience-image-5 {
     object-fit: contain;
     background-color: rgb(255, 255, 255);
     color: black;
+}
+#experience-image-5 {
+    padding: 10px;
 }
 .experience-image-reference {
     font-size: 10px;
@@ -466,19 +475,21 @@ footer {
 }
 
 
-.minor-experience {
+.minor-experience, .minor-project {
     display: flex;
     flex-flow: column;
     margin: 5px 0px;
     padding: 8px 8px 8px 16px;
     border-radius: 15px;
-    width: 80%;
     align-self: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(128, 128, 128, 0.2),rgba(255, 255, 255, 0.2));
     border: 1px solid grey;
+    width: 80%;
 }
-.minor-experience-headings {
+.minor-experience {
+    background-image: linear-gradient(rgba(128, 128, 128, 0.2),rgba(255, 255, 255, 0.2));
+}
+.minor-experience-headings, .minor-project-headings {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -497,14 +508,17 @@ footer {
     margin: 3px 5px 2px;
     font-size: 13px;
 }
-.minor-experience-title {
+.minor-experience-title, .minor-project-headings {
     font-size: 18px;
 }
-.minor-experience-subtitle {
+.minor-experience-subtitle, .minor-project-subtitle {
     margin-left: 20px;
     margin-top: 2px;
 }
-.minor-experience-explanation {
+.minor-project-subtitle {
+    font-size: 15px;
+}
+.minor-experience-explanation, .minor-project-explanation {
     margin-left: 8%;
     text-indent: -22px;
     font-size: 14px;
