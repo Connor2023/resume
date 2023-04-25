@@ -1,9 +1,10 @@
 Update Log:
 
   V2.1.5,
-  8:51pm, 25/04/2023
+  8:57pm, 25/04/2023
   - Added 3 new minor projects (Paint Application, Trail Organiser and "Rogue-like" Console Game) in projects webpage 
   - Added 2 new experiences (Coles and EzyMath Tutoring) in resume webpage
+  - Removed "Last updated" detail from profile webpage
 
 
   V2.1.4,
