@@ -658,8 +658,8 @@ footer {
     border-radius: 10px;
 }
 #contact-option-link-1 {
-    width: 110px;
-    transform: translateX(-30%) scaleX(60%);
+    width: 160px;
+    transform: translateX(-20%) scaleX(40%);
 }
 #contact-option-link-2 {
     width: 260px;
@@ -671,7 +671,7 @@ footer {
     width: 120px;
     transform: translateX(-25%) scaleX(50%);
 }
-#contact-option-link-3:hover {
+#contact-option-link-1:hover, #contact-option-link-3:hover {
     text-decoration: underline;
 }
 .contact-option-logo {
@@ -686,7 +686,7 @@ footer {
 }
 #contact-option-logo-1 {
     padding: 0px 10px;
-    transform: translateX(55px);
+    transform: translateX(80px);
 }
 #contact-option-logo-2 {
     transform: translateX(130px);
