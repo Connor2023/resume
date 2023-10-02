@@ -465,8 +465,8 @@ footer {
     background-color: rgb(255, 255, 255);
     color: black;
 }
-#experience-image-5 {
-    padding: 10px;
+#experience-image-8 {
+    object-fit: contain;
 }
 .experience-image-reference {
     font-size: 10px;
